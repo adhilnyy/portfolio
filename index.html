@@ -505,8 +505,9 @@
                         <h3 class="m-b-4 m-l-1 scroll-animation">Let’s get in touch.</h3>
                         <div class="seperator-line m-b-4 scroll-animation"></div>
                         <p class="m-b-6 scroll-animation">Fill out my form below and send me an email.</p>
-                        <form id="contact-form" name="contact" netlify autocomplete="off">
-                           <input type="text" id="contact-form-name" class="scroll-animation" name="name" placeholder="Name *"> <input type="text" id="contact-form-email" class="scroll-animation m-t-5" name="email" placeholder="E-Mail *"> <input data-require-filling="false" type="text" id="contact-form-phone" class="scroll-animation m-t-5" name="phone" placeholder="Phone"> 
+                       <form name="contact" method="POST" data-netlify="true" action="/thank-you">
+                          <input type="hidden" name="form-name" value="contact" />
+                           <input type="text" class="scroll-animation" name="name" placeholder="Name *"> <input type="text" id="contact-form-email" class="scroll-animation m-t-5" name="email" placeholder="E-Mail *"> <input data-require-filling="false" type="text" id="contact-form-phone" class="scroll-animation m-t-5" name="phone" placeholder="Phone"> 
                            <textarea id="contact-form-message" class="scroll-animation m-t-5" name="message" placeholder="Message *"></textarea>
                            <div class="button-area m-t-5 scroll-animation">
                               <button type="submit" class="default-button"> <span class="button-text">Send</span> <span class="icon-button m-l-2"><span class="ti-arrow-right"></span></span> </button> 
